@@ -1,0 +1,61 @@
+@import "_nullstyle";
+@import "_header";
+
+$gray: #5d6c7b;
+$black: #282739;
+$purple: #6f73ee;
+
+@font-face {
+    font-family: "Jost";
+    src: url(fonts/Jost-Bold.ttf);
+    font-weight: 700;
+    font-display: swap;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(fonts/Jost-SemiBold.ttf);
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(fonts/Jost-Medium.ttf);
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+    color: $black;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(fonts/Jost-Regular.ttf);
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    .wrapper {
+        overflow: hidden;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
