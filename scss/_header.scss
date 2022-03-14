@@ -1,6 +1,7 @@
 $gray: #5d6c7b;
 $black: #282739;
 $purple: #6f73ee;
+$green: #75d14a;
 
 @font-face {
     font-family: "Jost";
@@ -60,6 +61,7 @@ $purple: #6f73ee;
     height: 39px;
     font-weight: 400;
     display: flex;
+    justify-content: space-between;
     font-size: 12px;
     line-height: 17px;
     &-left {
@@ -81,6 +83,9 @@ $purple: #6f73ee;
 
     &-number {
         margin-right: 9px;
+        &:hover {
+            font-size: 13px;
+        }
         &:visited {
             color: $black;
         }
@@ -163,6 +168,7 @@ $purple: #6f73ee;
                 background-color: $purple;
                 box-sizing: border-box;
                 border-radius: 0px 5px 5px 0px;
+                cursor: pointer;
                 .item-search__icon {
                     margin-top: 25%;
                 }
@@ -186,6 +192,10 @@ $purple: #6f73ee;
     }
     .item-cart__name {
         font-weight: 500;
+        transition: all 0.5s ease 0s;
+        &:hover {
+            color: darken(red, 10%);
+        }
     }
 }
 
