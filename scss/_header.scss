@@ -83,6 +83,7 @@ $green: #75d14a;
 
     &-number {
         margin-right: 9px;
+        transition: all 0.5s ease 0s;
         &:hover {
             font-size: 13px;
         }
@@ -183,18 +184,33 @@ $green: #75d14a;
         justify-content: center;
         gap: 25px;
     }
-    .item-cart__cart {
+    .item-cart__icon {
         display: flex;
         gap: 10px;
-        &:visited {
-            color: $black;
+        cursor: pointer;
+        transition: all 1s ease 0s;
+        &:hover {
+            background-image: url(../icons/Heart2.svg);
+        }
+    }
+    .item-cart__icon2 {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 1s ease 0s;
+        &:hover {
+            background-image: url(../icons/cart2.svg);
         }
     }
     .item-cart__name {
         font-weight: 500;
         transition: all 0.5s ease 0s;
+        cursor: pointer;
         &:hover {
-            color: darken(red, 10%);
+            font-size: large;
+        }
+        &:visited {
+            color: $black;
         }
     }
 }
