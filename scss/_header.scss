@@ -2,6 +2,60 @@ $gray: #5d6c7b;
 $black: #282739;
 $purple: #6f73ee;
 
+@font-face {
+    font-family: "Jost";
+    src: url(../fonts/Jost-Bold.ttf);
+    font-weight: 700;
+    font-display: swap;
+    font-style: bold;
+    color: $black;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(../fonts/Jost-SemiBold.ttf);
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+    color: $black;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(../fonts/Jost-Medium.ttf);
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: $black;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(../fonts/Jost-Regular.ttf);
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    color: $gray;
+}
+
+// Меняем скроллбар
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f9f9fd;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
 .header__top {
     height: 39px;
     font-weight: 400;

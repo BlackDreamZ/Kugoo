@@ -1,40 +1,7 @@
 @import "_nullstyle";
 @import "_header";
 
-@font-face {
-    font-family: "Jost";
-    src: url(fonts/Jost-Bold.ttf);
-    font-weight: 700;
-    font-display: swap;
-    font-style: bold;
-}
-
-@font-face {
-    font-family: "Jost";
-    src: url(fonts/Jost-SemiBold.ttf);
-    font-weight: 600;
-    font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Jost";
-    src: url(fonts/Jost-Medium.ttf);
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-    color: $black;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-@font-face {
-    font-family: "Jost";
-    src: url(fonts/Jost-Regular.ttf);
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-}
+// переход на адаптив на 780px
 
 .container {
     width: 100%;
@@ -59,6 +26,8 @@ body {
 .slider {
     margin-top: 27px;
     background-image: url(../img/slider.png);
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     height: 420px;
     color: white;
@@ -101,5 +70,118 @@ body {
         padding: 15px 25px;
         border-radius: 5px;
         margin-bottom: 46px;
+    }
+}
+
+.electricscooter {
+    .benefits__items {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        .item-benefit {
+            &__title {
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 36px;
+            }
+
+            &__text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+            }
+
+            &__right {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 8%;
+                &-top {
+                    display: flex;
+                    align-items: center;
+                }
+                &-bottom {
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+        }
+        .item-benefit2 {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__cards {
+        margin-top: 40px;
+        &-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 35px;
+            line-height: 51px;
+        }
+
+        &-categories {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            .item-category {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                &:visited {
+                    color: $black;
+                }
+            }
+            .active {
+                border: 2px solid $purple;
+                border-radius: 8px;
+            }
+        }
+        .cards__items {
+            min-width: 0;
+            .item-card {
+                min-width: 0;
+                width: 255px;
+                &__slider {
+                    position: relative;
+                    min-width: 0;
+                    .slick-list {
+                        overflow: hidden;
+                        .slick-track {
+                            display: flex;
+                        }
+                    }
+                    .slick-arrow {
+                        position: absolute;
+                        top: 50%;
+                        z-index: 10;
+                        font-size: 0;
+                        width: 10px;
+                        height: 10px;
+                        border: 2px solid $purple;
+                        padding: 10px;
+                    }
+                    .slick-prev {
+                        left: 0;
+                        background-image: url(../icons/left.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    .slick-next {
+                        right: 0;
+                        background-image: url(../icons/right.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
     }
 }
