@@ -1,7 +1,7 @@
 @import "_nullstyle";
 @import "_header";
 
-// переход на адаптив на 780px
+// переход на адаптив на 790px
 
 .container {
     width: 100%;
@@ -343,8 +343,6 @@ body {
             }
             &__link {
                 font-weight: 500;
-                font-size: 14px;
-                line-height: 20px;
                 color: $purple;
                 transition: all 0.5s ease 0s;
                 &:hover {
@@ -363,6 +361,7 @@ body {
     background-image: url(../img/back_delivery.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     margin-top: 100px;
@@ -451,10 +450,358 @@ body {
         }
     }
     &__galery {
-        /*.galery-item {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        .galery-item {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            border: 2px solid $green;
             background-image: url(../img/galery/1.png);
             background-repeat: no-repeat;
             background-position: center;
-        }*/
+            background-size: cover;
+            flex: 22%;
+            &__content {
+                display: flex;
+                position: absolute;
+                width: 90%;
+                margin: 10px;
+                bottom: 0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: 10px;
+                padding: 10px 16px;
+                &-text {
+                    color: white;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 26px;
+                    margin-bottom: 2px;
+                }
+                &-price {
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+        .galery-item2 {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            border: 2px solid $green;
+            background-image: url(../img/galery/2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            flex: 22%;
+            &__content {
+                display: flex;
+                position: absolute;
+                width: 90%;
+                margin: 10px;
+                bottom: 0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: 10px;
+                padding: 10px 16px;
+                &-text {
+                    color: white;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 26px;
+                    margin-bottom: 2px;
+                }
+                &-price {
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+        .galery-item3 {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            border: 2px solid $green;
+            background-image: url(../img/galery/3.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            flex: 22%;
+            &__content {
+                display: flex;
+                position: absolute;
+                width: 90%;
+                margin: 10px;
+                bottom: 0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: 10px;
+                padding: 10px 16px;
+                &-text {
+                    color: white;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 26px;
+                    margin-bottom: 2px;
+                }
+                &-price {
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &__items-seemore {
+        display: block;
+        margin: 50px auto;
+        padding: 15px 25px;
+        border: 1.3px solid $purple;
+        box-sizing: border-box;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        transition: all 1s ease 0s;
+        &:hover {
+            color: white;
+            background-color: $purple;
+        }
+    }
+}
+
+.dealer {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    &__image {
+        position: relative;
+        flex: 45%;
+        margin-left: 60px;
+        height: 560px;
+        background-image: url(../img/dealer.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        &-blur {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            /* Note: backdrop-filter has minimal browser support */
+            width: 230px;
+            height: 25%;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            .image-blur {
+                display: flex;
+                flex-direction: column;
+                padding: 17px 21px;
+                gap: 5px;
+                &__title {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+                &__text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+            .image-blur__button {
+                display: flex;
+            }
+            .image-blur__button-link {
+                cursor: pointer;
+                background-color: $purple;
+                color: white;
+                padding: 11px 22px;
+                border-radius: 10px 0 0 10px;
+                width: 100%;
+            }
+            .image-blur__button-icon {
+                cursor: pointer;
+                background-color: $purple;
+                padding: 0 21px;
+                border-radius: 0 10px 10px 0;
+            }
+        }
+    }
+    &__content {
+        margin-right: 135px;
+        flex: 45%;
+        &-title {
+            font-weight: 600;
+            font-size: 35px;
+            line-height: 51px;
+        }
+        &-text {
+            margin-top: 18px;
+            margin-bottom: 60px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            color: $black;
+        }
+        &-list {
+            font-weight: 500;
+            font-style: 14px;
+            line-height: 20px;
+            margin-bottom: 13px;
+            list-style-image: url(../icons/triangle-left.svg);
+            li:nth-child(1) {
+                margin-top: 13px;
+            }
+            li {
+                font-weight: 400;
+                color: $black;
+            }
+        }
+        &-link {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            color: $purple;
+            transition: all 0.5s ease 0s;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+.benefits {
+    margin: 100px;
+    &__title {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 51px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        margin-top: 18px;
+        margin-bottom: 50px;
+    }
+    &__toggle {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        &-button {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            color: $purple;
+            padding: 15px 25px;
+            transition: all 1s ease 0s;
+            &:hover {
+                border-radius: 5px;
+                border: 1.3px solid $purple;
+            }
+        }
+        .active {
+            padding: 15px 25px;
+            border-radius: 5px;
+            border: 1.3px solid $purple;
+        }
+    }
+    &__items {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        .item-benefit {
+            flex: 30%;
+            padding: 30px 20px;
+            &__title {
+                margin-top: 20px;
+                margin-bottom: 8px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+            }
+            &__text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                a {
+                    color: $purple;
+                    transition: all 0.5s ease 0s;
+                }
+                a:hover {
+                    color: red;
+                }
+            }
+        }
+        .benefit-more {
+            background-image: url(../img/benefit-right.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10px;
+            border: 2px solid $green;
+            .item-benefit__link {
+                display: flex;
+                a {
+                    padding-right: 20px;
+                    color: $purple;
+                    transition: all 0.5s ease 0s;
+                    &:hover {
+                        color: red;
+                    }
+                }
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.reviews {
+    margin-top: 100px;
+    &__title {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 51px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__link {
+        margin-top: 17px;
+        display: flex;
+        justify-content: center;
+        a {
+            color: $purple;
+            padding-right: 8px;
+            transition: all 0.5s ease 0s;
+            &:hover {
+                color: red;
+            }
+        }
+        img {
+            cursor: pointer;
+        }
     }
 }
