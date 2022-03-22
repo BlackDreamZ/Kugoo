@@ -804,4 +804,231 @@ body {
             cursor: pointer;
         }
     }
+    &__items {
+        margin-top: 50px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .item-review {
+            background-image: url(../img/review3.png);
+            width: 378px;
+            height: 284px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px 23px;
+            border: 2px solid $green;
+            border-radius: 10px;
+            color: white;
+            &__top {
+                display: flex;
+                gap: 15px;
+                img {
+                    border-radius: 30px;
+                    border: 2px solid $green;
+                }
+                &-right {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    &-right-title {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 23px;
+                    }
+                    &-right-text {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 17px;
+                    }
+                }
+            }
+            &__middle {
+                margin-top: 19px;
+                margin-bottom: 11px;
+                display: flex;
+                gap: 14px;
+                &-text {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 17px;
+                    opacity: 0.7;
+                }
+            }
+            &__bottom {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+.survey {
+    margin-top: 100px;
+    &__top {
+        display: flex;
+        align-items: center;
+        &-title {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 35px;
+            line-height: 51px;
+        }
+        &-link {
+            cursor: pointer;
+            margin-left: auto;
+            display: flex;
+            gap: 8px;
+            a {
+                transition: all 0.5s ease 0s;
+                color: $purple;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    &__text {
+        margin-top: 17px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 400px;
+        margin-bottom: 50px;
+    }
+    &__item {
+        display: flex;
+        @media (max-width: 800px) {
+            flex-wrap: wrap;
+        }
+        gap: 30px;
+        position: relative;
+        &-1 {
+            &-image {
+                background-image: url("../img/survey1.png");
+                width: 540px;
+                height: 300px;
+                border-radius: 10px;
+                border: 2px solid $green;
+                img {
+                    display: block;
+                    margin: 100px auto;
+                    cursor: pointer;
+                }
+            }
+            &-text {
+                margin-top: 20px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        &-2 {
+            &-image {
+                background-image: url("../img/survey2.png");
+                width: 350px;
+                height: 200px;
+                border-radius: 10px;
+                border: 2px solid $green;
+                img {
+                    width: 68px;
+                    height: 68px;
+                    display: block;
+                    margin: 66px auto;
+                    cursor: pointer;
+                }
+            }
+            &-text {
+                margin-top: 20px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        &-3 {
+            &-image {
+                background-image: url("../img/survey3.png");
+                width: 350px;
+                height: 200px;
+                border-radius: 10px;
+                border: 2px solid $green;
+                img {
+                    width: 68px;
+                    height: 68px;
+                    display: block;
+                    margin: 66px auto;
+                    cursor: pointer;
+                }
+            }
+            &-text {
+                margin-top: 20px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        &-4 {
+            position: absolute;
+            left: 80%;
+            top: 20%;
+            cursor: pointer;
+        }
+    }
+}
+
+.newarts {
+    margin-top: 100px;
+    &__title {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 51px;
+        text-transform: uppercase;
+    }
+    &__items {
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        @media (max-width: 800px) {
+            flex-wrap: wrap;
+        }
+        .item-newart {
+            cursor: pointer;
+            max-width: 350px;
+            &__image {
+                border: 2px solid $green;
+                border-radius: 10px 10px 0 0;
+            }
+            &-middle {
+                padding: 20px;
+
+                &__title {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                &__text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-top: 11px;
+                    margin-bottom: 18px;
+                }
+                &__bottom {
+                    display: flex;
+                    gap: 25px;
+                    &-parts {
+                        display: flex;
+                        gap: 10px;
+                        &-value {
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
