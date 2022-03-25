@@ -1,0 +1,239 @@
+.footer {
+    margin-top: 73px;
+    &__mailing {
+        background-color: $purple;
+        .container {
+            display: flex;
+            padding: 24px 0;
+            .footer__mailing-title {
+                color: white;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 26px;
+                text-transform: uppercase;
+            }
+            .footer__mailing-input {
+                margin-left: auto;
+                margin-right: 20px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                padding: 15px 25px;
+                color: white;
+                min-width: 400px;
+            }
+            .footer__mailing-button {
+                border-radius: 5px;
+                padding: 15px 25px;
+                color: $purple;
+                transition: all 0.5s ease 0s;
+                &:hover {
+                    background-color: yellow;
+                }
+            }
+        }
+    }
+    &-head {
+        margin-top: 30px;
+        display: flex;
+        &__left {
+            display: flex;
+            gap: 125px;
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                &-title {
+                    margin-bottom: 7px;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+                &-text {
+                    color: $gray;
+                    transition: all 0.5s ease 0s;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+            &-list2 {
+                display: flex;
+                gap: 44px;
+            }
+        }
+        &__right {
+            margin-left: auto;
+            &-top {
+                display: flex;
+                margin-left: auto;
+                &-title {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+                &-link {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: $purple;
+                    margin-left: auto;
+                    transition: all 0.5s ease 0s;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+            &-main {
+                margin-top: 17px;
+                margin-left: auto;
+                display: flex;
+                gap: 40px;
+                .item-right {
+                    &__title {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 17px;
+                    }
+                    &__contact {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 23px;
+                        margin: 5px 0 7px 0;
+                    }
+                    &__time {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 17px;
+                        color: $gray;
+                    }
+                }
+            }
+            &-bottom {
+                margin-top: 17px;
+                margin-left: auto;
+                display: flex;
+                gap: 40px;
+                .item-right {
+                    max-width: 142px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    &__adress {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    &__phone {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 17px;
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+    &-main {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        &__left {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            &-logo {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 43px;
+                margin-right: 50px;
+            }
+            &-store {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                padding: 10px;
+                img {
+                    height: 25px;
+                }
+                &-content {
+                    color: $black;
+                    .content-text {
+                        font-size: 12px;
+                    }
+                    .content-store {
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        &__right {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+            .item-social {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+                padding: 5px 12px;
+                &__content {
+                    &-name {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: $black;
+                    }
+                    &-counter {
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 14px;
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+    &-bottom {
+        padding: 19px 0;
+        display: flex;
+        align-items: center;
+        &__left {
+            display: flex;
+            gap: 44px;
+            align-items: center;
+            &-link {
+                color: $gray;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                transition: all 0.5s ease 0s;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+        &__right {
+            margin-left: auto;
+            display: flex;
+            gap: 35px;
+            align-items: center;
+            &-social {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                .right-social__text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                .right-social__img {
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+    }
+}
