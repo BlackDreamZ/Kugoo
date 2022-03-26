@@ -2,7 +2,7 @@
 @import "_header";
 @import "_footer";
 
-// переход на адаптив на 790px
+// переход на адаптив на 780px
 
 .container {
     width: 100%;
@@ -135,6 +135,7 @@ body {
         &-top {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             margin: 40px 0;
         }
 
@@ -195,6 +196,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    align-items: center;
+    margin: 0 auto;
     .item-card {
         min-width: 0;
         width: 255px;
@@ -393,6 +396,10 @@ body {
         margin: 70px 0;
         margin-left: -80px;
         max-width: 440px;
+        @media (max-width: 580px) {
+            margin: 70px auto;
+            padding-left: 50px;
+        }
         &-promo {
             font-weight: 400;
             color: white;
@@ -410,6 +417,10 @@ body {
             line-height: 51px;
             color: white;
             margin: 27px 0;
+            @media (max-width: 580px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
         }
         &-button {
             font-weight: 400;
@@ -434,6 +445,9 @@ body {
         margin: 50px 0;
         display: flex;
         justify-content: space-between;
+        @media (max-width: 779px) {
+            flex-wrap: wrap;
+        }
         .popular__title {
             font-weight: 600;
             font-size: 35px;
@@ -600,6 +614,9 @@ body {
     display: flex;
     align-items: center;
     gap: 80px;
+    @media (max-width: 880px) {
+        flex-wrap: wrap;
+    }
     &__image {
         position: relative;
         flex: 45%;
@@ -608,6 +625,10 @@ body {
         background-image: url(../img/dealer.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
+        @media (max-width: 880px) {
+            margin: 0 auto;
+        }
         &-blur {
             display: flex;
             flex-direction: column;
@@ -626,6 +647,9 @@ body {
                 flex-direction: column;
                 padding: 17px 21px;
                 gap: 5px;
+                @media (max-width: 1400px) {
+                    color: white;
+                }
                 &__title {
                     font-weight: 500;
                     font-size: 18px;
@@ -659,6 +683,10 @@ body {
     &__content {
         margin-right: 135px;
         flex: 45%;
+        @media (max-width: 880px) {
+            margin: 0 auto;
+            max-width: 80%;
+        }
         &-title {
             font-weight: 600;
             font-size: 35px;
@@ -769,6 +797,10 @@ body {
         }
         .benefit-more {
             background-image: url(../img/benefit-right.png);
+            @media (max-width: 1125px) {
+                background-image: none;
+                border: none;
+            }
             background-position: right;
             background-repeat: no-repeat;
             display: flex;

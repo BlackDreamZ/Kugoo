@@ -65,6 +65,9 @@ $green: #75d14a;
     align-items: center;
     font-size: 12px;
     line-height: 17px;
+    @media (max-width: 484px) {
+        display: none;
+    }
     &-left {
         display: flex;
         color: $gray;
@@ -105,6 +108,9 @@ $green: #75d14a;
     height: 80px;
     display: flex;
     align-items: center;
+    @media (max-width: 484px) {
+        flex-wrap: wrap;
+    }
     &-logo {
         font-weight: 700;
         font-size: 30px;
@@ -121,6 +127,9 @@ $green: #75d14a;
         border: 1.5px solid $purple;
         box-sizing: border-box;
         border-radius: 5px;
+        @media (max-width: 779px) {
+            display: none;
+        }
         &-name {
             margin-left: 13px;
             font-size: 16px;
@@ -139,12 +148,19 @@ $green: #75d14a;
         width: 55%;
         height: 40px;
         margin-right: 30px;
+        @media (max-width: 484px) {
+            border: none;
+            min-width: 90%;
+        }
         .item-search {
             &__toggle {
                 display: flex;
                 align-items: center;
                 gap: 4px;
                 padding: 6px 14px;
+                @media (max-width: 484px) {
+                    display: none;
+                }
                 &:visited {
                     color: $black;
                 }
@@ -156,6 +172,9 @@ $green: #75d14a;
                 font-weight: 400;
                 color: $gray;
                 width: 80%;
+                @media (max-width: 484px) {
+                    margin-left: 10px;
+                }
             }
 
             &__button {
@@ -167,10 +186,20 @@ $green: #75d14a;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-blend-mode: overlay;
                 background-color: $purple;
                 box-sizing: border-box;
                 border-radius: 0px 5px 5px 0px;
                 cursor: pointer;
+                background-image: url("../icons/magnifier.svg");
+                background-repeat: no-repeat;
+                background-position: 9px 12px;
+                @media (max-width: 484px) {
+                    background-blend-mode: darken;
+                    background-color: white;
+                    background-image: url("../icons/magnifier2.svg");
+                    background-size: 18px 18px;
+                }
                 .item-search__icon {
                     margin-top: 25%;
                 }
@@ -184,6 +213,9 @@ $green: #75d14a;
         align-items: center;
         justify-content: center;
         gap: 25px;
+        @media (max-width: 779px) {
+            display: none;
+        }
     }
     .item-cart__icon {
         display: flex;
@@ -221,6 +253,9 @@ $green: #75d14a;
     gap: 50px;
     align-items: center;
     height: 40px;
+    @media (max-width: 779px) {
+        display: none;
+    }
     .header__bottom-item {
         transition: all 0.5s ease 0s;
     }
