@@ -57,6 +57,12 @@ $green: #75d14a;
     background: linear-gradient(180deg, #00c6fb, #005bea);
 }
 
+@media (max-width: 779px) {
+    .body.lock {
+        overflow: hidden;
+    }
+}
+
 .header__top {
     height: 39px;
     font-weight: 400;
@@ -107,14 +113,148 @@ $green: #75d14a;
     height: 80px;
     display: flex;
     align-items: center;
+    z-index: 50;
     @media (max-width: 484px) {
         flex-wrap: wrap;
+    }
+    &-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        transition: all 0.5s ease 0s;
+        &-top{        
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 27px 0;
+        }
+        &-middle {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        &-bottom {
+            margin-top: 15px;
+                margin-left: auto;
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                    .right-social__text {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    .right-social__img {
+                        height: 16px;
+                        width: 16px;
+                    }
+            }
+    }
+    &-menu.active {
+        top: 100px;
+        background-color: white;
+        .menu-item {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .header__bottom-promo {
+                text-align: center;
+                background-color: $purple;
+                color: white;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 14px;
+                padding: 3px 8px;
+                border-radius: 300px;
+            }
+            .header__bottom-promo2 {
+                text-align: center;
+                background-color: $purple;
+                color: white;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 14px;
+                width: 50%;
+                border-radius: 300px;
+            }
+        }
+    }
+    &-burger.active {
+        
+        &::before {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+        span{
+            display: none;
+        }
+    }
+    &-phone {
+        display: none;
+        @media (max-width: 484px) {
+            display: flex;
+            height: 20px;
+            width: 30px;
+            left: 40px;
+        }
+    }
+    &-burger {
+        display: none;
+        @media (max-width: 779px) {
+            display: flex;
+            position: relative;
+            height: 20px;
+            width: 30px;
+            left: 40px;
+            @media (max-width: 484px) {
+                left: 5px;
+            }
+            &::before, &::after {
+                content: '';
+                background-color: $purple;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+            }
+            &::before {
+                top: 0;
+                transition: all 0.2s ease 0s;
+            }
+            &::after {
+                bottom: 0;
+                transition: all 0.2s ease 0s;
+            }
+            span {
+                transition: all 0.2s ease 0s;
+                position: absolute;
+                background-color: $purple;
+                left: 0;
+                height: 2px;
+                top: 9px;
+                width: 100%;
+            }
+        }
     }
     &-logo {
         font-weight: 700;
         font-size: 30px;
         line-height: 43px;
         margin-right: 35px;
+        color: $black;
     }
 
     &-catalog {
@@ -147,6 +287,9 @@ $green: #75d14a;
         width: 55%;
         height: 40px;
         margin-right: 30px;
+        @media (max-width: 779px) {
+            min-width: 50%;
+        }
         @media (max-width: 484px) {
             border: none;
             min-width: 90%;
@@ -177,7 +320,10 @@ $green: #75d14a;
             }
 
             &__button {
-                position: absolute;
+                position:absolute;
+                @media (max-width: 484px) {
+                    position: relative;
+                }
                 right: -2px;
                 margin-left: auto;
                 width: 40px;
@@ -194,6 +340,7 @@ $green: #75d14a;
                 background-repeat: no-repeat;
                 background-position: 9px 12px;
                 @media (max-width: 484px) {
+                    margin-left: 0;
                     background-blend-mode: darken;
                     background-color: white;
                     background-image: url("../icons/magnifier2.svg");
@@ -212,6 +359,9 @@ $green: #75d14a;
         align-items: center;
         justify-content: center;
         gap: 25px;
+        
+    }
+    .item-cart__scales {
         @media (max-width: 779px) {
             display: none;
         }
@@ -221,6 +371,9 @@ $green: #75d14a;
         gap: 10px;
         cursor: pointer;
         transition: all 1s ease 0s;
+        @media (max-width: 779px) {
+            display: none;
+        }
         &:hover {
             background-image: url(../icons/Heart2.svg);
         }
@@ -230,6 +383,9 @@ $green: #75d14a;
         gap: 10px;
         cursor: pointer;
         transition: all 1s ease 0s;
+        @media (max-width: 779px) {
+            display: none;
+        }
         &:hover {
             background-image: url(../icons/cart2.svg);
         }
@@ -238,6 +394,9 @@ $green: #75d14a;
         font-weight: 500;
         transition: all 0.5s ease 0s;
         cursor: pointer;
+        @media (max-width: 779px) {
+            display: none;
+        }
         &:hover {
             font-size: large;
         }
@@ -266,6 +425,7 @@ $green: #75d14a;
         display: flex;
         align-items: center;
         gap: 8px;
+        color: $black;
         .header__bottom-promo {
             background-color: $purple;
             color: white;

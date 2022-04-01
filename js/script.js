@@ -1,5 +1,14 @@
 'use strict';
 
+// Работа меню-бургера
+
+$(document).ready(function () {
+    $('.header__middle-burger').click(function (event) {
+        $('.header__middle-burger, .header__middle-menu').toggleClass('active');
+        $('.body').toggleClass('lock');
+    })
+})
+
 // Работа слайдера
 
 $(document).ready(function () {
