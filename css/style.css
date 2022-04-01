@@ -1154,6 +1154,99 @@ h6 {
   color: #282739;
 }
 
+.signup img {
+  border-radius: 15px;
+  border: 2px solid #75d14a;
+  background-size: cover;
+  width: 100%;
+}
+
+.chosemodel1 {
+  margin-left: 12%;
+}
+
+.choosemodel {
+  margin-top: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 779px) {
+  .choosemodel {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.choosemodel__content {
+  padding: 28px;
+  max-width: 600px;
+}
+
+.choosemodel__content-title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 51px;
+  text-transform: uppercase;
+}
+
+.choosemodel__content-list {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.choosemodel__content-list-benefits:nth-child(1) {
+  margin-top: 18px;
+}
+
+.choosemodel__content-list-benefits {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  list-style-position: inside;
+  list-style-image: url("../icons/ok.svg");
+}
+
+.choosemodel__content2 {
+  margin-left: 95px;
+}
+
+@media (max-width: 779px) {
+  .choosemodel__content2 {
+    margin-left: 0;
+  }
+}
+
+.choosemodel__img {
+  border-radius: 5px;
+  border: 2px solid #75d14a;
+}
+
+.testapplication {
+  margin-top: 50px;
+}
+
+.testapplication img {
+  border-radius: 5px;
+  border: 2px solid #75d14a;
+  background-size: cover;
+  width: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 1100px;

@@ -1,4 +1,4 @@
-.adress{
+.adress {
     margin: 20px 0;
     &__container {
         display: flex;
@@ -7,11 +7,81 @@
         font-size: 12px;
         line-height: 17px;
         align-items: center;
-            .adress__home {
-                color: $gray;
+        .adress__home {
+            color: $gray;
+        }
+        .adress__text {
+            color: $black;
+        }
+    }
+}
+
+.signup {
+    img {
+        border-radius: 15px;
+        border: 2px solid $green;
+        background-size: cover;
+        width: 100%;
+    }
+}
+
+.chosemodel1 {
+    margin-left: 12%;
+}
+.choosemodel {
+    margin-top: 72px;
+    display: flex;
+    @media (max-width: 779px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__content {
+        padding: 28px;
+        max-width: 600px;
+        &-title {
+            font-weight: 600;
+            font-size: 35px;
+            line-height: 51px;
+            text-transform: uppercase;
+        }
+        &-list {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            &-benefits:nth-child(1) {
+                margin-top: 18px;
             }
-            .adress__text{
-                color: $black;
+            &-benefits {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+                list-style-position: inside;
+                list-style-image: url("../icons/ok.svg");
             }
+        }
+    }
+    &__content2 {
+        margin-left: 95px;
+        @media (max-width: 779px) {
+            margin-left: 0;
+        }
+    }
+    &__img {
+        border-radius: 5px;
+        border: 2px solid $green;
+    }
+}
+
+.testapplication {
+    margin-top: 50px;
+    img {
+        border-radius: 5px;
+        border: 2px solid $green;
+        background-size: cover;
+        width: 100%;
     }
 }
