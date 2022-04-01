@@ -5,27 +5,44 @@
         .container {
             display: flex;
             padding: 24px 0;
+            @media (max-width: 970px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 18px;
+            }
             .footer__mailing-title {
                 color: white;
                 font-weight: 600;
                 font-size: 18px;
                 line-height: 26px;
                 text-transform: uppercase;
+                @media (max-width: 970px) {
+                    margin: inherit;
+                    width: 90%;
+                    text-align: center;
+                }
             }
             .footer__mailing-input {
                 margin-left: auto;
+                @media (max-width: 970px) {
+                    margin: inherit;
+                    width: 90%;
+                }
                 margin-right: 20px;
                 background: rgba(255, 255, 255, 0.2);
                 border-radius: 5px;
                 padding: 15px 25px;
                 color: white;
-                min-width: 400px;
+                width: 400px;
             }
             .footer__mailing-button {
                 border-radius: 5px;
                 padding: 15px 25px;
                 color: $purple;
                 transition: all 0.5s ease 0s;
+                @media (max-width: 970px) {
+                    width: 90%;
+                }
                 &:hover {
                     background-color: yellow;
                 }
@@ -35,6 +52,9 @@
     &-head {
         margin-top: 30px;
         display: flex;
+        @media (max-width: 779px) {
+            display: none;
+        }
         &__left {
             display: flex;
             gap: 125px;
@@ -144,6 +164,9 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            @media (max-width: 779px) {
+                display: none;
+            }
             &-logo {
                 font-weight: 700;
                 font-size: 30px;
@@ -174,11 +197,18 @@
             margin-left: auto;
             display: flex;
             gap: 10px;
+            @media (max-width: 779px) {
+                flex-wrap: wrap;
+                margin: 0 auto;
+            }
             .item-social {
                 display: flex;
                 align-items: center;
                 gap: 13px;
                 padding: 5px 12px;
+                @media (max-width: 779px) {
+                    flex: 40%;
+                }
                 &__content {
                     &-name {
                         font-weight: 500;
@@ -200,10 +230,17 @@
         padding: 19px 0;
         display: flex;
         align-items: center;
+        @media (max-width: 779px) {
+            justify-content: center;
+        }
         &__left {
             display: flex;
             gap: 44px;
             align-items: center;
+            @media (max-width: 779px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
             &-link {
                 color: $gray;
                 font-weight: 400;
@@ -220,6 +257,9 @@
             display: flex;
             gap: 35px;
             align-items: center;
+            @media (max-width: 779px) {
+                display: none;
+            }
             &-social {
                 display: flex;
                 gap: 15px;

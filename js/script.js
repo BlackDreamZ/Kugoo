@@ -1,3 +1,5 @@
+'use strict';
+
 // Работа слайдера
 
 $(document).ready(function () {

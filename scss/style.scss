@@ -82,14 +82,17 @@ body {
     .benefits__items {
         margin-top: 30px;
         display: flex;
-        flex-wrap: nowrap;
+        gap: 40px;
+        justify-content: space-between;
         @media (max-width: 800px) {
             flex-wrap: wrap;
         }
-        gap: 40px;
-        justify-content: space-between;
         .item-benefit {
             position: relative;
+            flex: 20%;
+            @media (max-width: 400px) {
+                flex: 60%;
+            }
             &__title {
                 font-weight: 600;
                 font-size: 25px;
@@ -201,6 +204,9 @@ body {
     .item-card {
         min-width: 0;
         width: 255px;
+        @media (max-width: 530px) {
+            margin-left: 60px;
+        }
         &__top {
             border: 1.5px solid $green;
             box-sizing: border-box;
@@ -337,15 +343,19 @@ body {
     &__items {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 30px;
         @media (max-width: 950px) {
             flex-wrap: wrap;
         }
         .item-dignity {
             display: flex;
-            width: 540px;
             border: 2px solid $green;
             border-radius: 12px;
+            @media (max-width: 540px) {
+                width: 330px;
+                margin-right: 25px;
+            }
             &__left {
                 padding: 32px 40px;
             }
@@ -370,6 +380,9 @@ body {
             &__right {
                 border-radius: 10px;
                 width: 200px;
+                @media (max-width: 540px) {
+                    display: none;
+                }
             }
         }
     }
@@ -493,6 +506,10 @@ body {
             background-position: center;
             background-size: cover;
             flex: 22%;
+            @media (max-width: 960px) {
+                flex: auto;
+                margin-right: 15px;
+            }
             &__content {
                 display: flex;
                 position: absolute;
@@ -529,6 +546,10 @@ body {
             background-position: center;
             background-size: cover;
             flex: 22%;
+            @media (max-width: 960px) {
+                flex: auto;
+                margin-right: 15px;
+            }
             &__content {
                 display: flex;
                 position: absolute;
@@ -565,6 +586,10 @@ body {
             background-position: center;
             background-size: cover;
             flex: 22%;
+            @media (max-width: 960px) {
+                flex: auto;
+                margin-right: 15px;
+            }
             &__content {
                 display: flex;
                 position: absolute;
@@ -735,6 +760,9 @@ body {
         line-height: 51px;
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: 779px) {
+            font-size: 20px;
+        }
     }
     &__text {
         font-weight: 400;
@@ -743,6 +771,9 @@ body {
         text-align: center;
         margin-top: 18px;
         margin-bottom: 50px;
+        @media (max-width: 779px) {
+            font-size: 14px;
+        }
     }
     &__toggle {
         display: flex;
