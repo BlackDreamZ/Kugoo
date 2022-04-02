@@ -13,16 +13,17 @@
     box-sizing: content-box;
 }
 
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 body {
     font-family: "Jost", sans-serif;
     font-weight: 500;
-    .wrapper {
-        overflow: hidden;
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
 }
 
 .slider {
@@ -726,17 +727,21 @@ body {
             line-height: 23px;
             color: $black;
         }
-        &-list {
+        &-paragraph {
             font-weight: 500;
             font-style: 14px;
             line-height: 20px;
             margin-bottom: 13px;
+        }
+        &-list {
             list-style-image: url(../icons/triangle-left.svg);
+            list-style-position: inside;
             li:nth-child(1) {
                 margin-top: 13px;
             }
             li {
                 font-weight: 400;
+                margin-bottom: 5px;
                 color: $black;
             }
         }
@@ -855,6 +860,12 @@ body {
                 }
             }
         }
+    }
+}
+
+.video {
+    &__title {
+        display: none;
     }
 }
 
@@ -1145,7 +1156,7 @@ body {
     width: 100%;
 }
 
-.block._init .block__title {
+.block.__init .block__title {
     cursor: pointer;
 }
 
@@ -1153,8 +1164,8 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
-.block._init .block__title::before,
-.block._init .block__title::after {
+.block.__init .block__title::before,
+.block.__init .block__title::after {
     content: "";
     width: 20px;
     height: 1px;
@@ -1164,18 +1175,26 @@ body {
     top: 20px;
     transition: transform 0.3s ease 0s;
 }
-.block._init .block__title::after {
+.block.__init .block__title::after {
     transform: rotate(-90deg);
 }
-.block._init .block__title._active::after {
+.block__item.active .block__title::after {
     transform: rotate(0deg);
 }
-
-.block__text {
+.block__item {
+    overflow: hidden;
+}
+.block__item .block__text {
     margin-left: 30px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    max-height: 0;
+    transition: max-height 0.6s ease 0s;
+}
+.block__item.active .block__text {
+    max-height: 100px;
+    transition: max-height 0.6s ease 0s;
 }
 
 .recentlypurchase {

@@ -1256,12 +1256,7 @@ h6 {
           box-sizing: content-box;
 }
 
-body {
-  font-family: "Jost", sans-serif;
-  font-weight: 500;
-}
-
-body .wrapper {
+.wrapper {
   overflow: hidden;
   min-height: 100%;
   display: -webkit-box;
@@ -1272,6 +1267,11 @@ body .wrapper {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
 }
 
 .slider {
@@ -2304,12 +2304,16 @@ body .wrapper {
   color: #282739;
 }
 
-.dealer__content-list {
+.dealer__content-paragraph {
   font-weight: 500;
   font-style: 14px;
   line-height: 20px;
   margin-bottom: 13px;
+}
+
+.dealer__content-list {
   list-style-image: url(../icons/triangle-left.svg);
+  list-style-position: inside;
 }
 
 .dealer__content-list li:nth-child(1) {
@@ -2318,6 +2322,7 @@ body .wrapper {
 
 .dealer__content-list li {
   font-weight: 400;
+  margin-bottom: 5px;
   color: #282739;
 }
 
@@ -2486,6 +2491,10 @@ body .wrapper {
 
 .benefits__items .benefit-more .item-benefit__link img {
   cursor: pointer;
+}
+
+.video__title {
+  display: none;
 }
 
 .reviews {
@@ -2863,7 +2872,7 @@ body .wrapper {
   width: 100%;
 }
 
-.block._init .block__title {
+.block.__init .block__title {
   cursor: pointer;
 }
 
@@ -2871,8 +2880,8 @@ body .wrapper {
   padding: 10px 10px 10px 10px;
 }
 
-.block._init .block__title::before,
-.block._init .block__title::after {
+.block.__init .block__title::before,
+.block.__init .block__title::after {
   content: "";
   width: 20px;
   height: 1px;
@@ -2886,21 +2895,34 @@ body .wrapper {
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
-.block._init .block__title::after {
+.block.__init .block__title::after {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.block._init .block__title._active::after {
+.block__item.active .block__title::after {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.block__text {
+.block__item {
+  overflow: hidden;
+}
+
+.block__item .block__text {
   margin-left: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  max-height: 0;
+  -webkit-transition: max-height 0.6s ease 0s;
+  transition: max-height 0.6s ease 0s;
+}
+
+.block__item.active .block__text {
+  max-height: 100px;
+  -webkit-transition: max-height 0.6s ease 0s;
+  transition: max-height 0.6s ease 0s;
 }
 
 .recentlypurchase__title {
