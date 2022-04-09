@@ -81,6 +81,7 @@ $green: #75d14a;
     }
 
     &-item {
+        color: $gray;
         &:visited {
             color: $gray;
         }
@@ -94,6 +95,7 @@ $green: #75d14a;
     &-number {
         margin-right: 9px;
         transition: all 0.5s ease 0s;
+        color: $black;
         &:hover {
             font-size: 13px;
         }
@@ -125,7 +127,7 @@ $green: #75d14a;
         height: 100%;
         overflow: auto;
         transition: all 0.5s ease 0s;
-        &-top{        
+        &-top {
             display: flex;
             gap: 40px;
             flex-direction: column;
@@ -140,20 +142,20 @@ $green: #75d14a;
         }
         &-bottom {
             margin-top: 15px;
-                margin-left: auto;
-                display: flex;
-                gap: 15px;
-                justify-content: center;
-                    .right-social__text {
-                        font-weight: 400;
-                        font-size: 14px;
-                        line-height: 20px;
-                    }
-                    .right-social__img {
-                        height: 16px;
-                        width: 16px;
-                    }
+            margin-left: auto;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            .right-social__text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
             }
+            .right-social__img {
+                height: 16px;
+                width: 16px;
+            }
+        }
     }
     &-menu.active {
         top: 100px;
@@ -189,7 +191,6 @@ $green: #75d14a;
         }
     }
     &-burger.active {
-        
         &::before {
             transform: rotate(45deg);
             top: 9px;
@@ -198,7 +199,7 @@ $green: #75d14a;
             transform: rotate(-45deg);
             bottom: 9px;
         }
-        span{
+        span {
             display: none;
         }
     }
@@ -222,8 +223,9 @@ $green: #75d14a;
             @media (max-width: 484px) {
                 left: 5px;
             }
-            &::before, &::after {
-                content: '';
+            &::before,
+            &::after {
+                content: "";
                 background-color: $purple;
                 position: absolute;
                 width: 100%;
@@ -320,7 +322,7 @@ $green: #75d14a;
             }
 
             &__button {
-                position:absolute;
+                position: absolute;
                 @media (max-width: 484px) {
                     position: relative;
                 }
@@ -359,7 +361,6 @@ $green: #75d14a;
         align-items: center;
         justify-content: center;
         gap: 25px;
-        
     }
     .item-cart__scales {
         @media (max-width: 779px) {
@@ -394,6 +395,7 @@ $green: #75d14a;
         font-weight: 500;
         transition: all 0.5s ease 0s;
         cursor: pointer;
+        color: $black;
         @media (max-width: 779px) {
             display: none;
         }

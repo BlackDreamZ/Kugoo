@@ -1,7 +1,8 @@
 @import "_nullstyle"; // стили обнуления
 @import "_header"; // стили шапки
 @import "_footer"; // стили подвала
-@import "_test";
+@import "_test"; // page test-drive
+@import "_catalog"; // page catalog
 
 // переход на адаптив на 780px
 
@@ -901,7 +902,7 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         .item-review {
-            background-image: url(../img/review3.png);
+            background-image: url("../img/review3_clear.png");
             width: 378px;
             height: 284px;
             display: flex;
@@ -909,44 +910,66 @@ body {
             justify-content: flex-end;
             padding: 22px 23px;
             border: 2px solid $green;
-            border-radius: 10px;
+            border-radius: 15px;
             color: white;
+            transition: all 1s ease 0s;
             &__top {
+                opacity: 0;
+                visibility: hidden;
+            }
+            &__middle {
+                opacity: 0;
+                visibility: hidden;
+            }
+            &__bottom {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .item-review:hover {
+            background-image: url(../img/review3.png);
+            .item-review__top {
                 display: flex;
                 gap: 15px;
+                opacity: 1;
+                visibility: visible;
                 img {
                     border-radius: 30px;
                     border: 2px solid $green;
                 }
-                &-right {
+                .item-review-right {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    &-right-title {
+                    .item-review-right-title {
                         font-weight: 500;
                         font-size: 16px;
                         line-height: 23px;
                     }
-                    &-right-text {
+                    .item-review-right-text {
                         font-weight: 400;
                         font-size: 12px;
                         line-height: 17px;
                     }
                 }
             }
-            &__middle {
+            .item-review__middle {
                 margin-top: 19px;
                 margin-bottom: 11px;
                 display: flex;
                 gap: 14px;
-                &-text {
+                opacity: 1;
+                visibility: visible;
+                .item-review-text {
                     font-weight: 400;
                     font-size: 12px;
                     line-height: 17px;
                     opacity: 0.7;
                 }
             }
-            &__bottom {
+            .item-review__bottom {
+                opacity: 1;
+                visibility: visible;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 17px;
@@ -1205,5 +1228,69 @@ body {
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 60px;
+    }
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+    &:target {
+        opacity: 1;
+        visibility: visible;
+        .popup__content {
+            transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+            opacity: 1;
+        }
+    }
+    &__area {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+
+    &__content {
+        position: relative;
+        background-color: #fff;
+        color: $black;
+        max-width: 800px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        transition: all 0.5s ease 0s;
+        opacity: 0;
+        transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+        &-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 20px;
+            color: $black;
+            text-decoration: none;
+        }
+        .item-right {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
     }
 }

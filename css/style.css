@@ -174,6 +174,10 @@ h6 {
   gap: 30px;
 }
 
+.header__top-item {
+  color: #5d6c7b;
+}
+
 .header__top-item:visited {
   color: #5d6c7b;
 }
@@ -189,6 +193,7 @@ h6 {
   margin-right: 9px;
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+  color: #282739;
 }
 
 .header__top-number:hover {
@@ -388,7 +393,7 @@ h6 {
 
 @media (max-width: 779px) {
   .header__middle-burger::before, .header__middle-burger::after {
-    content: '';
+    content: "";
     background-color: #6f73ee;
     position: absolute;
     width: 100%;
@@ -630,6 +635,7 @@ h6 {
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   cursor: pointer;
+  color: #282739;
 }
 
 @media (max-width: 779px) {
@@ -1245,6 +1251,56 @@ h6 {
   border: 2px solid #75d14a;
   background-size: cover;
   width: 100%;
+}
+
+.adress {
+  margin: 20px 0;
+}
+
+.adress__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adress__container .adress__home {
+  color: #5d6c7b;
+}
+
+.adress__container .adress__text {
+  color: #282739;
+}
+
+.catalog {
+  height: 200px;
+  background: url("../pages/img/catalog-top.png");
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+
+.catalog__title {
+  position: absolute;
+  top: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 51px;
+  text-transform: uppercase;
+}
+
+.recentlypurchase-catalog {
+  margin-top: 100px;
 }
 
 .container {
@@ -2548,7 +2604,7 @@ body {
 }
 
 .reviews__items .item-review {
-  background-image: url(../img/review3.png);
+  background-image: url("../img/review3_clear.png");
   width: 378px;
   height: 284px;
   display: -webkit-box;
@@ -2563,23 +2619,46 @@ body {
           justify-content: flex-end;
   padding: 22px 23px;
   border: 2px solid #75d14a;
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .reviews__items .item-review__top {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reviews__items .item-review__middle {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reviews__items .item-review__bottom {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reviews__items .item-review:hover {
+  background-image: url(../img/review3.png);
+}
+
+.reviews__items .item-review:hover .item-review__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
+  opacity: 1;
+  visibility: visible;
 }
 
-.reviews__items .item-review__top img {
+.reviews__items .item-review:hover .item-review__top img {
   border-radius: 30px;
   border: 2px solid #75d14a;
 }
 
-.reviews__items .item-review__top-right {
+.reviews__items .item-review:hover .item-review__top .item-review-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2592,35 +2671,39 @@ body {
           justify-content: center;
 }
 
-.reviews__items .item-review__top-right-right-title {
+.reviews__items .item-review:hover .item-review__top .item-review-right .item-review-right-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
 }
 
-.reviews__items .item-review__top-right-right-text {
+.reviews__items .item-review:hover .item-review__top .item-review-right .item-review-right-text {
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
 }
 
-.reviews__items .item-review__middle {
+.reviews__items .item-review:hover .item-review__middle {
   margin-top: 19px;
   margin-bottom: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 14px;
+  opacity: 1;
+  visibility: visible;
 }
 
-.reviews__items .item-review__middle-text {
+.reviews__items .item-review:hover .item-review__middle .item-review-text {
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
   opacity: 0.7;
 }
 
-.reviews__items .item-review__bottom {
+.reviews__items .item-review:hover .item-review__bottom {
+  opacity: 1;
+  visibility: visible;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -2932,4 +3015,94 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 60px;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  position: relative;
+  background-color: #fff;
+  color: #282739;
+  max-width: 800px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__content-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #282739;
+  text-decoration: none;
+}
+
+.popup__content .item-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2px;
 }

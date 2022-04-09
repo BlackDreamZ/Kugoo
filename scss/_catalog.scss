@@ -1,0 +1,39 @@
+.adress {
+  margin: 20px 0;
+  &__container {
+    display: flex;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    align-items: center;
+    .adress__home {
+      color: $gray;
+    }
+    .adress__text {
+      color: $black;
+    }
+  }
+}
+
+.catalog {
+  height: 200px;
+  background: url("../pages/img/catalog-top.png");
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  &__title {
+    position: absolute;
+    top: 35%;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 51px;
+    text-transform: uppercase;
+  }
+}
+
+.recentlypurchase-catalog {
+  margin-top: 100px;
+}
