@@ -490,6 +490,7 @@ h6 {
 }
 
 .header__middle-search .item-search__toggle {
+  color: #282739;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
