@@ -1335,6 +1335,7 @@ body {
   background-image: url(../img/slider.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   width: 100%;
   height: 420px;
   color: white;
@@ -2864,6 +2865,7 @@ body {
   font-size: 35px;
   line-height: 51px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .newarts__items {
@@ -2872,6 +2874,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 800px) {
@@ -3024,6 +3029,12 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 60px;
+}
+
+.recentlypurchase .cards__items {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .popup {
